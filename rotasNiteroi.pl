@@ -1,514 +1,514 @@
-conexao(C1, C2, "Av. Jorn. Alberto Franciso Torres", 150).
-conexao(C2, C1, "Av. Jorn. Alberto Franciso Torres", 150).
+conexao(c1, c2, "Av. Jorn. Alberto Franciso Torres", 150).
+conexao(c2, c1, "Av. Jorn. Alberto Franciso Torres", 150).
 
-conexao(C2, C3, "Av. Jorn. Alberto Franciso Torres", 120).
-conexao(C3, C2, "Av. Jorn. Alberto Franciso Torres", 120).
+conexao(c2, c3, "Av. Jorn. Alberto Franciso Torres", 120).
+conexao(c3, c2, "Av. Jorn. Alberto Franciso Torres", 120).
 
-conexao(C3, C4, "Av. Jorn. Alberto Franciso Torres", 150).
-conexao(C4, C3, "Av. Jorn. Alberto Franciso Torres", 150).
+conexao(c3, c4, "Av. Jorn. Alberto Franciso Torres", 150).
+conexao(c4, c3, "Av. Jorn. Alberto Franciso Torres", 150).
 
-conexao(C4, C5, "Av. Jorn. Alberto Franciso Torres", 150).
-conexao(C5, C4, "Av. Jorn. Alberto Franciso Torres", 150).
+conexao(c4, c5, "Av. Jorn. Alberto Franciso Torres", 150).
+conexao(c5, c4, "Av. Jorn. Alberto Franciso Torres", 150).
 
-conexao(C5, C6, "Av. Jorn. Alberto Franciso Torres", 150).
-conexao(C6, C5, "Av. Jorn. Alberto Franciso Torres", 150).
+conexao(c5, c6, "Av. Jorn. Alberto Franciso Torres", 150).
+conexao(c6, c5, "Av. Jorn. Alberto Franciso Torres", 150).
 
-conexao(C6, C7, "Av. Jorn. Alberto Franciso Torres", 120).
-conexao(C7, C6, "Av. Jorn. Alberto Franciso Torres", 120).
+conexao(c6, c7, "Av. Jorn. Alberto Franciso Torres", 120).
+conexao(c7, c6, "Av. Jorn. Alberto Franciso Torres", 120).
 
-conexao(C7, C8, "Av. Jorn. Alberto Franciso Torres", 130).
-conexao(C8, C7, "Av. Jorn. Alberto Franciso Torres", 130).
+conexao(c7, c8, "Av. Jorn. Alberto Franciso Torres", 130).
+conexao(c8, c7, "Av. Jorn. Alberto Franciso Torres", 130).
 
-conexao(C8, C9, "Av. Jorn. Alberto Franciso Torres", 120).
-conexao(C9, C8, "Av. Jorn. Alberto Franciso Torres", 120).
+conexao(c8, c9, "Av. Jorn. Alberto Franciso Torres", 120).
+conexao(c9, c8, "Av. Jorn. Alberto Franciso Torres", 120).
 
-conexao(C9, C10, "Av. Jorn. Alberto Franciso Torres", 140).
-conexao(C10, C9, "Av. Jorn. Alberto Franciso Torres", 140).
+conexao(c9, c10, "Av. Jorn. Alberto Franciso Torres", 140).
+conexao(c10, c9, "Av. Jorn. Alberto Franciso Torres", 140).
 
-conexao(C10, C11, "Av. Jorn. Alberto Franciso Torres", 140).
-conexao(C11, C10, "Av. Jorn. Alberto Franciso Torres", 140).
+conexao(c10, c11, "Av. Jorn. Alberto Franciso Torres", 140).
+conexao(c11, c10, "Av. Jorn. Alberto Franciso Torres", 140).
 
 
 
-conexao(C13, C1, "R. Miguel de Frias", 200).
+conexao(c13, c1, "R. Miguel de Frias", 200).
 
-conexao(C14, C13, "R. Miguel de Frias", 150).
+conexao(c14, c13, "R. Miguel de Frias", 150).
 
-conexao(C15, C14, "R. Miguel de Frias", 160).
+conexao(c15, c14, "R. Miguel de Frias", 160).
 
-conexao(C16, C15, "R. Miguel de Frias", 150).
+conexao(c16, c15, "R. Miguel de Frias", 150).
 
-conexao(C17, C16, "R. Miguel de Frias", 130).
+conexao(c17, c16, "R. Miguel de Frias", 130).
 
 
 
-conexao(C22, C23, "R. Castilho França", 120).
+conexao(c22, c23, "R. castilho França", 120).
 
 
 
-conexao(C69, C17, "R. Dr. Paulo César", 180).
+conexao(c69, c17, "R. Dr. Paulo césar", 180).
 
-conexao(C71, C69, "R. Dr. Paulo César", 150).
+conexao(c71, c69, "R. Dr. Paulo césar", 150).
 
-conexao(C74, C71, "R. Dr. Paulo César", 180).
+conexao(c74, c71, "R. Dr. Paulo césar", 180).
 
 
 
-conexao(C2, C18, "R. Álvares de Azevedo", 170).
+conexao(c2, c18, "R. Álvares de Azevedo", 170).
 
-conexao(C18, C19, "R. Álvares de Azevedo", 150).
+conexao(c18, c19, "R. Álvares de Azevedo", 150).
 
-conexao(C19, C20, "R. Álvares de Azevedo", 150).
+conexao(c19, c20, "R. Álvares de Azevedo", 150).
 
-conexao(C20, C21, "R. Álvares de Azevedo", 130).
+conexao(c20, c21, "R. Álvares de Azevedo", 130).
 
-conexao(C21, C24, "R. Álvares de Azevedo", 120).
+conexao(c21, c24, "R. Álvares de Azevedo", 120).
 
-conexao(C24, C69, "R. Álvares de Azevedo", 120).
+conexao(c24, c69, "R. Álvares de Azevedo", 120).
 
 
 
-conexao(C29, C3, "R. Gen. Pereira da Silva", 170).
+conexao(c29, c3, "R. Gen. Pereira da Silva", 170).
 
-conexao(C28, C29, "R. Gen. Pereira da Silva", 140).
+conexao(c28, c29, "R. Gen. Pereira da Silva", 140).
 
-conexao(C27, C28, "R. Gen. Pereira da Silva", 150).
+conexao(c27, c28, "R. Gen. Pereira da Silva", 150).
 
-conexao(C26, C27, "R. Gen. Pereira da Silva", 140).
+conexao(c26, c27, "R. Gen. Pereira da Silva", 140).
 
-conexao(C25, C26, "R. Gen. Pereira da Silva", 110).
+conexao(c25, c26, "R. Gen. Pereira da Silva", 110).
 
-conexao(C70, C25, "R. Gen. Pereira da Silva", 110).
+conexao(c70, c25, "R. Gen. Pereira da Silva", 110).
 
-conexao(C71, C70, "R. Gen. Pereira da Silva", 120).
+conexao(c71, c70, "R. Gen. Pereira da Silva", 120).
 
 
 
-conexao(C4, C30, "R. Pres. Backer", 170).
+conexao(c4, c30, "R. Pres. Backer", 170).
 
-conexao(C30, C31, "R. Pres. Backer", 130).
+conexao(c30, c31, "R. Pres. Backer", 130).
 
-conexao(C31, C32, "R. Pres. Backer", 110).
+conexao(c31, c32, "R. Pres. Backer", 110).
 
-conexao(C32, C33, "R. Pres. Backer", 140).
+conexao(c32, c33, "R. Pres. Backer", 140).
 
-conexao(C33, C34, "R. Pres. Backer", 120).
+conexao(c33, c34, "R. Pres. Backer", 120).
 
-conexao(C34, C72, "R. Pres. Backer", 130).
+conexao(c34, c72, "R. Pres. Backer", 130).
 
-conexao(C72, C73, "R. Pres. Backer", 110).
+conexao(c72, c73, "R. Pres. Backer", 110).
 
-conexao(C73, C74, "R. Pres. Backer", 90).
+conexao(c73, c74, "R. Pres. Backer", 90).
 
-conexao(C74, C76, "R. Pres. Backer", 75).
+conexao(c74, c76, "R. Pres. Backer", 75).
 
-conexao(C76, C78, "R. Pres. Backer", 90).
+conexao(c76, c78, "R. Pres. Backer", 90).
 
 
 
-conexao(C38, C37, "R. Cap. Zeferino", 100).
+conexao(c38, c37, "R. cap. Zeferino", 100).
 
 
 
-conexao(C5, C35, "R. Lopes Trovão", 170).
+conexao(c5, c35, "R. Lopes Trovão", 170).
 
-conexao(C35, C36, "R. Lopes Trovão", 130).
+conexao(c35, c36, "R. Lopes Trovão", 130).
 
-conexao(C36, C39, "R. Lopes Trovão", 110).
+conexao(c36, c39, "R. Lopes Trovão", 110).
 
-conexao(C39, C40, "R. Lopes Trovão", 150).
+conexao(c39, c40, "R. Lopes Trovão", 150).
 
-conexao(C40, C41, "R. Lopes Trovão", 130).
+conexao(c40, c41, "R. Lopes Trovão", 130).
 
-conexao(C41, C83, "R. Lopes Trovão", 120).
+conexao(c41, c83, "R. Lopes Trovão", 120).
 
-conexao(C83, C84, "R. Lopes Trovão", 100).
+conexao(c83, c84, "R. Lopes Trovão", 100).
 
-conexao(C84, C75, "R. Lopes Trovão", 110).
+conexao(c84, c75, "R. Lopes Trovão", 110).
 
-conexao(C75, C77, "R. Lopes Trovão", 90).
+conexao(c75, c77, "R. Lopes Trovão", 90).
 
-conexao(C77, C79, "R. Lopes Trovão", 80).
+conexao(c77, c79, "R. Lopes Trovão", 80).
 
-conexao(C79, C80, "R. Lopes Trovão", 90).
+conexao(c79, c80, "R. Lopes Trovão", 90).
 
 
 
-conexao(C6, C42, "R. Otávio Carneiro", 170).
+conexao(c6, c42, "R. Otávio carneiro", 170).
 
-conexao(C42, C43, "R. Otávio Carneiro", 140).
+conexao(c42, c43, "R. Otávio carneiro", 140).
 
-conexao(C43, C44, "R. Otávio Carneiro", 120).
+conexao(c43, c44, "R. Otávio carneiro", 120).
 
 
 
-conexao(C6, C42, "R. Otávio Carneiro", 170).
+conexao(c6, c42, "R. Otávio carneiro", 170).
 
-conexao(C42, C43, "R. Otávio Carneiro", 140).
+conexao(c42, c43, "R. Otávio carneiro", 140).
 
-conexao(C43, C44, "R. Otávio Carneiro", 120).
+conexao(c43, c44, "R. Otávio carneiro", 120).
 
 
 
-conexao(C85, C81, "R. Dr. Herotides de Oliveira", 130).
+conexao(c85, c81, "R. Dr. Herotides de Oliveira", 130).
 
-conexao(C86, C85, "R. Dr. Herotides de Oliveira", 110).
+conexao(c86, c85, "R. Dr. Herotides de Oliveira", 110).
 
-conexao(C87, C86, "R. Dr. Herotides de Oliveira", 105).
+conexao(c87, c86, "R. Dr. Herotides de Oliveira", 105).
 
 
 
-conexao(C87, C88, "Tv. Dr. César Couple", 120).
+conexao(c87, c88, "Tv. Dr. césar couple", 120).
 
 
 
-conexao(C82, C90, "R. Prof. Miguel Couto", 130).
+conexao(c82, c90, "R. Prof. Miguel couto", 130).
 
-conexao(C90, C91, "R. Prof. Miguel Couto", 100).
+conexao(c90, c91, "R. Prof. Miguel couto", 100).
 
-conexao(C91, C92, "R. Prof. Miguel Couto", 110).
+conexao(c91, c92, "R. Prof. Miguel couto", 110).
 
-conexao(C92, C93, "R. Prof. Miguel Couto", 110).
+conexao(c92, c93, "R. Prof. Miguel couto", 110).
 
-conexao(C93, C89, "R. Prof. Miguel Couto", 100).
+conexao(c93, c89, "R. Prof. Miguel couto", 100).
 
 
 
-conexao(C7, C45, "R. Belisário Augusto", 170).
+conexao(c7, c45, "R. Belisário Augusto", 170).
 
 
 
-conexao(C50, C49, "R. Domingues de Sá", 100).
+conexao(c50, c49, "R. Domingues de Sá", 100).
 
-conexao(C51, C50, "R. Domingues de Sá", 90).
+conexao(c51, c50, "R. Domingues de Sá", 90).
 
-conexao(C94, C51, "R. Domingues de Sá", 110).
+conexao(c94, c51, "R. Domingues de Sá", 110).
 
-conexao(C95, C94, "R. Domingues de Sá", 90).
+conexao(c95, c94, "R. Domingues de Sá", 90).
 
-conexao(C96, C95, "R. Domingues de Sá", 100).
+conexao(c96, c95, "R. Domingues de Sá", 100).
 
-conexao(C97, C96, "R. Domingues de Sá", 145).
+conexao(c97, c96, "R. Domingues de Sá", 145).
 
-conexao(C98, C97, "R. Domingues de Sá", 95).
+conexao(c98, c97, "R. Domingues de Sá", 95).
 
 
 
-conexao(C46, C8, "R. Osvaldo Cruz", 180).
+conexao(c46, c8, "R. Osvaldo cruz", 180).
 
 
 
-conexao(C52, C53, "R. Cinco de Julho", 90).
+conexao(c52, c53, "R. cinco de Julho", 90).
 
-conexao(C53, C54, "R. Cinco de Julho", 100).
+conexao(c53, c54, "R. cinco de Julho", 100).
 
-conexao(C54, C99, "R. Cinco de Julho", 120).
+conexao(c54, c99, "R. cinco de Julho", 120).
 
-conexao(C99, C100, "R. Cinco de Julho", 110).
+conexao(c99, c100, "R. cinco de Julho", 110).
 
-conexao(C100, C101, "R. Cinco de Julho", 120).
+conexao(c100, c101, "R. cinco de Julho", 120).
 
-conexao(C101, C102, "R. Cinco de Julho", 140).
+conexao(c101, c102, "R. cinco de Julho", 140).
 
-conexao(C102, C103, "R. Cinco de Julho", 100).
+conexao(c102, c103, "R. cinco de Julho", 100).
 
 
 
-conexao(C9, C47, "R. Mariz e Barros", 190).
+conexao(c9, c47, "R. Mariz e Barros", 190).
 
-conexao(C47, C48, "R. Mariz e Barros", 300).
+conexao(c47, c48, "R. Mariz e Barros", 300).
 
-conexao(C48, C61, "R. Mariz e Barros", 40).
+conexao(c48, c61, "R. Mariz e Barros", 40).
 
-conexao(C61, C55, "R. Mariz e Barros", 30).
+conexao(c61, c55, "R. Mariz e Barros", 30).
 
-conexao(C55, C56, "R. Mariz e Barros", 130).
+conexao(c55, c56, "R. Mariz e Barros", 130).
 
-conexao(C56, C104, "R. Mariz e Barros", 120).
+conexao(c56, c104, "R. Mariz e Barros", 120).
 
-conexao(C104, C105, "R. Mariz e Barros", 120).
+conexao(c104, c105, "R. Mariz e Barros", 120).
 
-conexao(C105, C106, "R. Mariz e Barros", 110).
+conexao(c105, c106, "R. Mariz e Barros", 110).
 
-conexao(C106, C107, "R. Mariz e Barros", 140).
+conexao(c106, c107, "R. Mariz e Barros", 140).
 
-conexao(C107, C108, "R. Mariz e Barros", 100).
+conexao(c107, c108, "R. Mariz e Barros", 100).
 
 
 
-conexao(C57, C10, "R. Comendador Queirós", 190).
+conexao(c57, c10, "R. comendador Queirós", 190).
 
 
 
-conexao(C57, C58, "Alameda Carolina", 280).
+conexao(c57, c58, "Alameda carolina", 280).
 
 
 
-conexao(C59, C58, "Av. Sete de Setembro", 40).
+conexao(c59, c58, "Av. Sete de Setembro", 40).
 
-conexao(C60, C59, "Av. Sete de Setembro", 30).
+conexao(c60, c59, "Av. Sete de Setembro", 30).
 
-conexao(C161, C60, "Av. Sete de Setembro", 120).
+conexao(c161, c60, "Av. Sete de Setembro", 120).
 
-conexao(C109, C161, "Av. Sete de Setembro", 110).
+conexao(c109, c161, "Av. Sete de Setembro", 110).
 
-conexao(C110, C109, "Av. Sete de Setembro", 100).
+conexao(c110, c109, "Av. Sete de Setembro", 100).
 
-conexao(C111, C110, "Av. Sete de Setembro", 90).
+conexao(c111, c110, "Av. Sete de Setembro", 90).
 
-conexao(C112, C111, "Av. Sete de Setembro", 165).
+conexao(c112, c111, "Av. Sete de Setembro", 165).
 
-conexao(C113, C112, "Av. Sete de Setembro", 110).
+conexao(c113, c112, "Av. Sete de Setembro", 110).
 
 
 
-conexao(C63, C64, "R. Dr. Carlos Halfeld", 110).
+conexao(c63, c64, "R. Dr. carlos Halfeld", 110).
 
-conexao(C64, C65, "R. Dr. Carlos Halfeld", 110).
+conexao(c64, c65, "R. Dr. carlos Halfeld", 110).
 
 
 
-conexao(C65, C114, "Rua Francisco Dutra", 110).
+conexao(c65, c114, "Rua Francisco Dutra", 110).
 
-conexao(C114, C115, "Rua Francisco Dutra", 160).
+conexao(c114, c115, "Rua Francisco Dutra", 160).
 
 
 
-conexao(C11, C62, "Av. Alm. Ary Parreiras", 250).
-conexao(C62, C11, "Av. Alm. Ary Parreiras", 250).
+conexao(c11, c62, "Av. Alm. Ary Parreiras", 250).
+conexao(c62, c11, "Av. Alm. Ary Parreiras", 250).
 
-conexao(C62, C66, "Av. Alm. Ary Parreiras", 270).
-conexao(C66, C62, "Av. Alm. Ary Parreiras", 270).
+conexao(c62, c66, "Av. Alm. Ary Parreiras", 270).
+conexao(c66, c62, "Av. Alm. Ary Parreiras", 270).
 
-conexao(C66, C67, "Av. Alm. Ary Parreiras", 100).
-conexao(C67, C66, "Av. Alm. Ary Parreiras", 100).
+conexao(c66, c67, "Av. Alm. Ary Parreiras", 100).
+conexao(c67, c66, "Av. Alm. Ary Parreiras", 100).
 
-conexao(C67, C68, "Av. Alm. Ary Parreiras", 110).
+conexao(c67, c68, "Av. Alm. Ary Parreiras", 110).
 
-conexao(C68, C116, "Av. Alm. Ary Parreiras", 130).
+conexao(c68, c116, "Av. Alm. Ary Parreiras", 130).
 
-conexao(C116, C117, "Av. Alm. Ary Parreiras", 170).
+conexao(c116, c117, "Av. Alm. Ary Parreiras", 170).
 
-conexao(C117, C118, "Av. Alm. Ary Parreiras", 190).
+conexao(c117, c118, "Av. Alm. Ary Parreiras", 190).
 
-conexao(C118, C119, "Av. Alm. Ary Parreiras", 120).
+conexao(c118, c119, "Av. Alm. Ary Parreiras", 120).
 
 
 
-conexao(C13, C18, "R. Ator Paulo Gustavo", 150).
+conexao(c13, c18, "R. Ator Paulo Gustavo", 150).
 
-conexao(C18, C29, "R. Ator Paulo Gustavo", 120).
+conexao(c18, c29, "R. Ator Paulo Gustavo", 120).
 
-conexao(C29, C30, "R. Ator Paulo Gustavo", 150).
+conexao(c29, c30, "R. Ator Paulo Gustavo", 150).
 
-conexao(C30, C35, "R. Ator Paulo Gustavo", 150).
+conexao(c30, c35, "R. Ator Paulo Gustavo", 150).
 
-conexao(C35, C42, "R. Ator Paulo Gustavo", 150).
+conexao(c35, c42, "R. Ator Paulo Gustavo", 150).
 
-conexao(C42, C45, "R. Ator Paulo Gustavo", 120).
+conexao(c42, c45, "R. Ator Paulo Gustavo", 120).
 
-conexao(C45, C46, "R. Ator Paulo Gustavo", 130).
+conexao(c45, c46, "R. Ator Paulo Gustavo", 130).
 
-conexao(C46, C47, "R. Ator Paulo Gustavo", 120).
+conexao(c46, c47, "R. Ator Paulo Gustavo", 120).
 
-conexao(C47, C57, "R. Ator Paulo Gustavo", 140).
+conexao(c47, c57, "R. Ator Paulo Gustavo", 140).
 
-conexao(C62, C57, "R. Ator Paulo Gustavo", 140).
+conexao(c62, c57, "R. Ator Paulo Gustavo", 140).
 
 
 
-conexao(C19, C14, "Rua Dr. Tavares de Macedo", 150).
+conexao(c19, c14, "Rua Dr. Tavares de Macedo", 150).
 
-conexao(C28, C19, "Rua Dr. Tavares de Macedo", 120).
+conexao(c28, c19, "Rua Dr. Tavares de Macedo", 120).
 
-conexao(C31, C28, "Rua Dr. Tavares de Macedo", 150).
+conexao(c31, c28, "Rua Dr. Tavares de Macedo", 150).
 
-conexao(C37, C31, "Rua Dr. Tavares de Macedo", 80).
+conexao(c37, c31, "Rua Dr. Tavares de Macedo", 80).
 
-conexao(C36, C37, "Rua Dr. Tavares de Macedo", 70).
+conexao(c36, c37, "Rua Dr. Tavares de Macedo", 70).
 
-conexao(C43, C36, "Rua Dr. Tavares de Macedo", 150).
+conexao(c43, c36, "Rua Dr. Tavares de Macedo", 150).
 
 
 
-conexao(C15, C20, "R. Gavião Peixoto", 160).
+conexao(c15, c20, "R. Gavião Peixoto", 160).
 
-conexao(C20, C27, "R. Gavião Peixoto", 130).
+conexao(c20, c27, "R. Gavião Peixoto", 130).
 
-conexao(C27, C32, "R. Gavião Peixoto", 150).
+conexao(c27, c32, "R. Gavião Peixoto", 150).
 
-conexao(C32, C38, "R. Gavião Peixoto", 70).
+conexao(c32, c38, "R. Gavião Peixoto", 70).
 
-conexao(C38, C39, "R. Gavião Peixoto", 80).
+conexao(c38, c39, "R. Gavião Peixoto", 80).
 
-conexao(C39, C44, "R. Gavião Peixoto", 160).
+conexao(c39, c44, "R. Gavião Peixoto", 160).
 
-conexao(C44, C49, "R. Gavião Peixoto", 130).
+conexao(c44, c49, "R. Gavião Peixoto", 130).
 
-conexao(C49, C52, "R. Gavião Peixoto", 120).
+conexao(c49, c52, "R. Gavião Peixoto", 120).
 
-conexao(C52, C48, "R. Gavião Peixoto", 130).
+conexao(c52, c48, "R. Gavião Peixoto", 130).
 
-conexao(C48, C58, "R. Gavião Peixoto", 140).
+conexao(c48, c58, "R. Gavião Peixoto", 140).
 
-conexao(C58, C63, "R. Gavião Peixoto", 110).
+conexao(c58, c63, "R. Gavião Peixoto", 110).
 
-conexao(C63, C66, "R. Gavião Peixoto", 100).
+conexao(c63, c66, "R. Gavião Peixoto", 100).
 
 
 
-conexao(C16, C23, "R. Mem de Sá", 70).
+conexao(c16, c23, "R. Mem de Sá", 70).
 
-conexao(C23, C21, "R. Mem de Sá", 80).
+conexao(c23, c21, "R. Mem de Sá", 80).
 
-conexao(C21, C26, "R. Mem de Sá", 120).
+conexao(c21, c26, "R. Mem de Sá", 120).
 
-conexao(C26, C33, "R. Mem de Sá", 140).
+conexao(c26, c33, "R. Mem de Sá", 140).
 
-conexao(C33, C40, "R. Mem de Sá", 150).
+conexao(c33, c40, "R. Mem de Sá", 150).
 
 
 
-conexao(C61, C59, "R. Dr. Miguel Viêira Ferreira", 130).
+conexao(c61, c59, "R. Dr. Miguel Viêira Ferreira", 130).
 
 
 
-conexao(C50, C53, "Rua Lemos Cunha", 120).
+conexao(c50, c53, "Rua Lemos cunha", 120).
 
-conexao(C53, C55, "Rua Lemos Cunha", 130).
+conexao(c53, c55, "Rua Lemos cunha", 130).
 
-conexao(C55, C60, "Rua Lemos Cunha", 120).
+conexao(c55, c60, "Rua Lemos cunha", 120).
 
-conexao(C60, C64, "Rua Lemos Cunha", 100).
+conexao(c60, c64, "Rua Lemos cunha", 100).
 
-conexao(C64, C67, "Rua Lemos Cunha", 100).
+conexao(c64, c67, "Rua Lemos cunha", 100).
 
 
 
-conexao(C22, C17, "Av. Roberto Silveira", 80).
+conexao(c22, c17, "Av. Roberto Silveira", 80).
 
-conexao(C24, C22, "Av. Roberto Silveira", 70).
+conexao(c24, c22, "Av. Roberto Silveira", 70).
 
-conexao(C25, C24, "Av. Roberto Silveira", 110).
+conexao(c25, c24, "Av. Roberto Silveira", 110).
 
-conexao(C34, C25, "Av. Roberto Silveira", 150).
+conexao(c34, c25, "Av. Roberto Silveira", 150).
 
-conexao(C41, C34, "Av. Roberto Silveira", 130).
+conexao(c41, c34, "Av. Roberto Silveira", 130).
 
-conexao(C81, C41, "Av. Roberto Silveira", 80).
+conexao(c81, c41, "Av. Roberto Silveira", 80).
 
-conexao(C82, C81, "Av. Roberto Silveira", 90).
+conexao(c82, c81, "Av. Roberto Silveira", 90).
 
-conexao(C51, C82, "Av. Roberto Silveira", 90).
+conexao(c51, c82, "Av. Roberto Silveira", 90).
 
-conexao(C54, C51, "Av. Roberto Silveira", 110).
+conexao(c54, c51, "Av. Roberto Silveira", 110).
 
-conexao(C56, C54, "Av. Roberto Silveira", 120).
+conexao(c56, c54, "Av. Roberto Silveira", 120).
 
-conexao(C161, C56, "Av. Roberto Silveira", 130).
+conexao(c161, c56, "Av. Roberto Silveira", 130).
 
-conexao(C65, C161, "Av. Roberto Silveira", 90).
+conexao(c65, c161, "Av. Roberto Silveira", 90).
 
-conexao(C68, C65, "Av. Roberto Silveira", 110).
+conexao(c68, c65, "Av. Roberto Silveira", 110).
 
 
 
-conexao(C69, C70, "R. Mario Alves", 100).
+conexao(c69, c70, "R. Mario Alves", 100).
 
-conexao(C70, C72, "R. Mario Alves", 110).
+conexao(c70, c72, "R. Mario Alves", 110).
 
 
 
-conexao(C83, C85, "R. Min. Otávio Kelly", 90).
+conexao(c83, c85, "R. Min. Otávio Kelly", 90).
 
-conexao(C85, C90, "R. Min. Otávio Kelly", 110).
+conexao(c85, c90, "R. Min. Otávio Kelly", 110).
 
-conexao(C90, C94, "R. Min. Otávio Kelly", 100).
+conexao(c90, c94, "R. Min. Otávio Kelly", 100).
 
-conexao(C94, C99, "R. Min. Otávio Kelly", 135).
+conexao(c94, c99, "R. Min. Otávio Kelly", 135).
 
-conexao(C99, C104, "R. Min. Otávio Kelly", 130).
+conexao(c99, c104, "R. Min. Otávio Kelly", 130).
 
-conexao(C104, C109, "R. Min. Otávio Kelly", 140).
+conexao(c104, c109, "R. Min. Otávio Kelly", 140).
 
-conexao(C109, C114, "R. Min. Otávio Kelly", 110).
+conexao(c109, c114, "R. Min. Otávio Kelly", 110).
 
-conexao(C114, C116, "R. Min. Otávio Kelly", 120).
+conexao(c114, c116, "R. Min. Otávio Kelly", 120).
 
 
 
-conexao(C73, C71, "R. Santos Dumont", 130).
+conexao(c73, c71, "R. Santos Dumont", 130).
 
 
 
-conexao(C84, C86, "R. Nóbrega", 105).
+conexao(c84, c86, "R. Nóbrega", 105).
 
-conexao(C86, C91, "R. Nóbrega", 100).
+conexao(c86, c91, "R. Nóbrega", 100).
 
-conexao(C91, C95, "R. Nóbrega", 100).
+conexao(c91, c95, "R. Nóbrega", 100).
 
-conexao(C95, C100, "R. Nóbrega", 120).
+conexao(c95, c100, "R. Nóbrega", 120).
 
-conexao(C100, C105, "R. Nóbrega", 110).
+conexao(c100, c105, "R. Nóbrega", 110).
 
-conexao(C105, C110, "R. Nóbrega", 110).
+conexao(c105, c110, "R. Nóbrega", 110).
 
 
 
-conexao(C75, C74, "R. Pres. João Pessoa", 120).
+conexao(c75, c74, "R. Pres. João Pessoa", 120).
 
-conexao(C87, C75, "R. Pres. João Pessoa", 90).
+conexao(c87, c75, "R. Pres. João Pessoa", 90).
 
-conexao(C92, C87, "R. Pres. João Pessoa", 100).
+conexao(c92, c87, "R. Pres. João Pessoa", 100).
 
-conexao(C96, C92, "R. Pres. João Pessoa", 105).
+conexao(c96, c92, "R. Pres. João Pessoa", 105).
 
-conexao(C101, C96, "R. Pres. João Pessoa", 130).
+conexao(c101, c96, "R. Pres. João Pessoa", 130).
 
-conexao(C106, C101, "R. Pres. João Pessoa", 140).
+conexao(c106, c101, "R. Pres. João Pessoa", 140).
 
-conexao(C111, C106, "R. Pres. João Pessoa", 120).
+conexao(c111, c106, "R. Pres. João Pessoa", 120).
 
-conexao(C115, C111, "R. Pres. João Pessoa", 90).
+conexao(c115, c111, "R. Pres. João Pessoa", 90).
 
-conexao(C117, C115, "R. Pres. João Pessoa", 100).
+conexao(c117, c115, "R. Pres. João Pessoa", 100).
 
 
 
-conexao(C77, C76, "R. Ten. Mesquita", 110).
+conexao(c77, c76, "R. Ten. Mesquita", 110).
 
 
 
-conexao(C78, C79, "R. Geraldo Martins", 110).
+conexao(c78, c79, "R. Geraldo Martins", 110).
 
-conexao(C79, C88, "R. Geraldo Martins", 80).
+conexao(c79, c88, "R. Geraldo Martins", 80).
 
-conexao(C88, C93, "R. Geraldo Martins", 70).
+conexao(c88, c93, "R. Geraldo Martins", 70).
 
-conexao(C93, C97, "R. Geraldo Martins", 90).
+conexao(c93, c97, "R. Geraldo Martins", 90).
 
-conexao(C97, C102, "R. Geraldo Martins", 115).
+conexao(c97, c102, "R. Geraldo Martins", 115).
 
-conexao(C102, C107, "R. Geraldo Martins", 120).
+conexao(c102, c107, "R. Geraldo Martins", 120).
 
-conexao(C107, C112, "R. Geraldo Martins", 120).
+conexao(c107, c112, "R. Geraldo Martins", 120).
 
 
 
-conexao(C112, C118, "R. Dom Bosco", 145).
+conexao(c112, c118, "R. Dom Bosco", 145).
 
 
 
-conexao(C119, C113, "R. Santa Rosa", 140).
+conexao(c119, c113, "R. Santa Rosa", 140).
 
-conexao(C113, C108, "R. Santa Rosa", 110).
+conexao(c113, c108, "R. Santa Rosa", 110).
 
-conexao(C108, C103, "R. Santa Rosa", 90).
+conexao(c108, c103, "R. Santa Rosa", 90).
 
-conexao(C103, C98, "R. Santa Rosa", 110).
+conexao(c103, c98, "R. Santa Rosa", 110).
 
-conexao(C98, C89, "R. Santa Rosa", 80).
+conexao(c98, c89, "R. Santa Rosa", 80).
 
-conexao(C89, C80, "R. Santa Rosa", 130).
+conexao(c89, c80, "R. Santa Rosa", 130).
 
-conexao(C80, C74, "R. Santa Rosa", 210).
+conexao(c80, c74, "R. Santa Rosa", 210).
