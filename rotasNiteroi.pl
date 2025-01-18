@@ -29,7 +29,6 @@ conexao(c10, c11, "Av. Jorn. Alberto Franciso Torres", 140).
 conexao(c11, c10, "Av. Jorn. Alberto Franciso Torres", 140).
 
 
-
 conexao(c13, c1, "R. Miguel de Frias", 200).
 
 conexao(c14, c13, "R. Miguel de Frias", 150).
@@ -515,21 +514,23 @@ conexao(c80, c74, "R. Santa Rosa", 210).
 
 % Predicado principal de Busca em Largura (BFS) - encontra o caminho de "Inicio" até "Objetivo"
 % A busca é iniciada com o caminho contendo apenas o nó "Inicio"
-bfs(Inicio, Objetivo, Caminho) :-
+bfs(Inicio, Objetivo, Caminho, Arestas) :-
     % Chama o predicado auxiliar bfs/4, passando uma lista inicial com o nó "Inicio",
     % o objetivo a ser alcançado, uma lista vazia para armazenar os nós visitados, e o caminho resultante.
-    bfs([[Inicio]], Objetivo, [], Caminho),
+    bfs([[Inicio]], Objetivo, [], Caminho, Arestas),
     !. % O operador Cut (!) é usado para garantir que a busca pare após a primeira solução encontrada
 
 % Caso o caminho atual atinja o objetivo, inverte o caminho para que ele seja retornado na ordem correta
 % O caminho atual é formado pela lista [Objetivo | Resto], onde "Objetivo" é o último nó alcançado
-bfs([[Objetivo | Resto] | _], Objetivo, _, Caminho) :-
+bfs([[Objetivo | Resto] | _], Objetivo, _, Caminho, Arestas) :-
     % Inverte o caminho encontrado (que está na ordem reversa) para retornar o caminho correto do início até o objetivo
-    reverse([Objetivo | Resto], Caminho).
+    reverse([Objetivo | Resto], Caminho),
+    length(Caminho, NumVertices),
+    Arestas is NumVertices-1.
 
 % Expansão dos caminhos a partir do nó atual
 % O predicado percorre todos os caminhos possíveis e expande os caminhos ao adicionar os vizinhos não visitados
-bfs([CaminhoAtual | OutrosCaminhos], Objetivo, Visitados, Caminho) :-
+bfs([CaminhoAtual | OutrosCaminhos], Objetivo, Visitados, Caminho, Arestas) :-
     % Extrai o nó atual do caminho em expansão (primeiro nó da lista de caminho)
     CaminhoAtual = [NoAtual | _],
 
@@ -546,7 +547,7 @@ bfs([CaminhoAtual | OutrosCaminhos], Objetivo, Visitados, Caminho) :-
     append(OutrosCaminhos, NovosCaminhos, CaminhosAtualizados),
 
     % Chama a busca recursivamente com a lista de caminhos atualizada, o objetivo, a lista de nós visitados e o caminho resultante
-    bfs(CaminhosAtualizados, Objetivo, [NoAtual | Visitados], Caminho).
+    bfs(CaminhosAtualizados, Objetivo, [NoAtual | Visitados], Caminho, Arestas).
 
 % Predicado auxiliar para inverter listas
 % Este predicado inverte a lista passada como parâmetro para retornar o caminho na ordem correta
