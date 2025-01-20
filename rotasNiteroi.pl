@@ -513,46 +513,25 @@ conexao(c89, c80, "R. Santa Rosa", 130).
 
 conexao(c80, c74, "R. Santa Rosa", 210).
 
-% Predicado principal de Busca em Largura (BFS) - encontra o caminho de "Inicio" até "Objetivo"
-% A busca é iniciada com o caminho contendo apenas o nó "Inicio"
-bfs(Inicio, Objetivo, Caminho) :-
-    % Chama o predicado auxiliar bfs/4, passando uma lista inicial com o nó "Inicio",
-    % o objetivo a ser alcançado, uma lista vazia para armazenar os nós visitados, e o caminho resultante.
-    bfs([[Inicio]], Objetivo, [], Caminho),
-    !. % O operador Cut (!) é usado para garantir que a busca pare após a primeira solução encontrada
 
-% Caso o caminho atual atinja o objetivo, inverte o caminho para que ele seja retornado na ordem correta
-% O caminho atual é formado pela lista [Objetivo | Resto], onde "Objetivo" é o último nó alcançado
-bfs([[Objetivo | Resto] | _], Objetivo, _, Caminho) :-
-    % Inverte o caminho encontrado (que está na ordem reversa) para retornar o caminho correto do início até o objetivo
+% Predicado principal
+buscar(Inicio, Objetivo, Caminho) :-
+    bfs([[Inicio]], Objetivo, Caminho, []),
+    !.
+
+% Caso base: o primeiro caminho na fila alcança o objetivo
+bfs([[Objetivo | Resto] | _], Objetivo, Caminho, _) :-
     reverse([Objetivo | Resto], Caminho).
 
-% Expansão dos caminhos a partir do nó atual
-% O predicado percorre todos os caminhos possíveis e expande os caminhos ao adicionar os vizinhos não visitados
-bfs([CaminhoAtual | OutrosCaminhos], Objetivo, Visitados, Caminho) :-
-    % Extrai o nó atual do caminho em expansão (primeiro nó da lista de caminho)
-    CaminhoAtual = [NoAtual | _],
-
-    % Encontra todos os vizinhos do nó atual que ainda não foram visitados e que ainda não estão no caminho atual
+% Passo recursivo: expandir o próximo nó, considerando nós visitados
+bfs([[NoAtual | CaminhoParcial] | OutrosCaminhos], Objetivo, Caminho, Visitados) :-
     findall(
-        [ProximoNo | CaminhoAtual], % Forma novos caminhos começando com o vizinho
-        (conexao(NoAtual, ProximoNo, _, _), % Verifica se existe uma conexão entre o nó atual e o próximo nó
-        \+ member(ProximoNo, Visitados), % Garante que o próximo nó não foi visitado ainda
-        \+ member(ProximoNo, CaminhoAtual)), % Garante que o próximo nó não está no caminho atual
-        NovosCaminhos % Lista de novos caminhos gerados
+        [ProximoNo, NoAtual | CaminhoParcial],
+        (
+            conexao(NoAtual, ProximoNo, _, _), 
+            \+ member(ProximoNo, [NoAtual | Visitados])
+        ),
+        NovosCaminhos
     ),
-
-    % Atualiza a fila de caminhos, adicionando os novos caminhos gerados
     append(OutrosCaminhos, NovosCaminhos, CaminhosAtualizados),
-
-    % Chama a busca recursivamente com a lista de caminhos atualizada, o objetivo, a lista de nós visitados e o caminho resultante
-    bfs(CaminhosAtualizados, Objetivo, [NoAtual | Visitados], Caminho).
-
-% Predicado auxiliar para inverter listas
-% Este predicado inverte a lista passada como parâmetro para retornar o caminho na ordem correta
-reverse(Lista, Invertida) :-
-    reverse(Lista, [], Invertida). % Chama a versão interna do predicado passando uma lista acumuladora vazia
-reverse([], Acumulador, Acumulador). % Caso base: se a lista original estiver vazia, retorna o acumulador como a lista invertida
-reverse([Cabeca | Cauda], Acumulador, Invertida) :-
-    % Recursivamente inverte a lista, movendo o primeiro elemento da lista para o acumulador
-    reverse(Cauda, [Cabeca | Acumulador], Invertida).
+    bfs(CaminhosAtualizados, Objetivo, Caminho, [NoAtual | Visitados]).
