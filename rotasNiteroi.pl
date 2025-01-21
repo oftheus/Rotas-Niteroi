@@ -513,12 +513,14 @@ conexaoGH(c89, c80, "R. Santa Rosa", 130, 1488).
 conexaoGH(c80, c74, "R. Santa Rosa", 210, 1364).
 
 
+
+
 %Implementação A-Estrela!
 
 %Retorna a solucao quando atinge o nó objetivo, no nosso caso, c119
 aEstrela([[G,H,F,No|Caminho]|_],[G,H,F,Solucao]):-
     objetivo(No),
-    reverse([No|Caminho], Solucao).
+    reverse([No|Caminho], Solucao), !.
 
 aEstrela([Caminho| Caminhos], Solucao):-
     estendeAEstrela(Caminho, NovosCaminhos),
@@ -552,7 +554,12 @@ particionar(X, [Y|Cauda], [Y|Menor], Maior):-
 particionar(X,[Y|Cauda],Menor,[Y|Maior]):-
     particionar(X,Cauda,Menor,Maior).
 
+
+
+
 maior([_,_,F1|_],[_,_,F2|_]) :- F1 > F2.
+
+
 
 %Definicao de conexaoGH usando a funçao f(n)=g(n) + h(n)
 %CA= Cruzamento A, CB = Cruzamento B
@@ -573,6 +580,13 @@ conexaoGn(CA, CB, Rua, G):-
 conexaoHn(CA, CB, Rua, H):-
     conexaoGH(CA,CB,Rua,_,H).
 
+%Wrapper de busca pra o A*.
+buscaAEstrela(Origem, Solucao):-
+    conexaoHn(_, Origem, _, HInicial),
+    GInicial is 0,
+    FInicial is GInicial+HInicial,
+    aEstrela([[GInicial, HInicial, FInicial, Origem]], Solucao).
+
 %buscar(com A*). 
 buscar(Origem, Solucao):-
     conexaoHn(_, Origem, _, HInicial),
@@ -582,6 +596,48 @@ buscar(Origem, Solucao):-
 
 %Objetivo fixado, maior limitação do A*, não podemos facilmente mudar de objetivo, só a origem.
 objetivo(c119).
+
+%Retorna a solucao quando atinge o nó objetivo, no nosso caso, c119
+branchAndBound([[G,No|Caminho]|_],[G,Solucao]):-
+    objetivo(No),
+    reverse([No|Caminho], Solucao), !.
+
+branchAndBound([Caminho| Caminhos], Solucao):-
+    estendebranchAndBound(Caminho, NovosCaminhos),
+    append(Caminhos, NovosCaminhos, Caminhos1),
+    ordenabranchAndBound(Caminhos1, Caminhos2),
+    branchAndBound(Caminhos2, Solucao).
+
+estendebranchAndBound([GC, No|Caminho], NovosCaminhos):-
+	findall([GNovo, NovoNo, No|Caminho], 
+            (	conexaoGn(No, NovoNo, _, GN),
+                not(member(NovoNo, [No|Caminho])),
+                GNovo is GC + GN
+             ), NovosCaminhos).
+
+ordenabranchAndBound(Caminhos, CaminhosOrd):-
+    quicksortBab(Caminhos, CaminhosOrd).
+
+quicksortBab([],[]).
+quicksortBab([X|Cauda], ListaOrd):-
+    particionarBab(X,Cauda,Menor,Maior),
+    quicksortBab(Menor,MenorOrd),
+    quicksortBab(Maior,MaiorOrd),
+    append(MenorOrd, [X|MaiorOrd],ListaOrd).
+
+particionarBab(_, [], [], []).
+particionarBab(X, [Y|Cauda], [Y|Menor], Maior):-
+    maiorBab(X,Y),!,
+    particionarBab(X,Cauda,Menor,Maior).
+
+particionarBab(X,[Y|Cauda],Menor,[Y|Maior]):-
+    particionarBab(X,Cauda,Menor,Maior).
+
+
+
+
+maiorBab([G1|_],[G2|_]) :- G1 > G2.
+
 %BUSCA EM LARGURA
 % Predicado principal
 buscar(Inicio, Objetivo, Caminho, Arestas) :-
