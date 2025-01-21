@@ -559,8 +559,13 @@ particionar(X,[Y|Cauda],Menor,[Y|Maior]):-
 
 maior([_,_,F1|_],[_,_,F2|_]) :- F1 > F2.
 
+buscaAEstrela(Origem, Solucao):-
+    conexaoHn(_, Origem, _, HInicial),
+    GInicial is 0,
+    FInicial is GInicial+HInicial,
+    aEstrela([[GInicial, HInicial, FInicial, Origem]], Solucao).
 
-
+%Definição do predicado conexão
 %Definicao de conexaoGH usando a funçao f(n)=g(n) + h(n)
 %CA= Cruzamento A, CB = Cruzamento B
 conexaoFn(CA, CB, Rua, G, H, F):-
@@ -580,23 +585,11 @@ conexaoGn(CA, CB, Rua, G):-
 conexaoHn(CA, CB, Rua, H):-
     conexaoGH(CA,CB,Rua,_,H).
 
-%Wrapper de busca pra o A*.
-buscaAEstrela(Origem, Solucao):-
-    conexaoHn(_, Origem, _, HInicial),
-    GInicial is 0,
-    FInicial is GInicial+HInicial,
-    aEstrela([[GInicial, HInicial, FInicial, Origem]], Solucao).
-
-%buscar(com A*). 
-buscar(Origem, Solucao):-
-    conexaoHn(_, Origem, _, HInicial),
-    GInicial is 0,
-    FInicial is GInicial+HInicial,
-    aEstrela([[GInicial, HInicial, FInicial, Origem]], Solucao).
 
 %Objetivo fixado, maior limitação do A*, não podemos facilmente mudar de objetivo, só a origem.
 objetivo(c119).
 
+%Implementação do branchAndBound
 %Retorna a solucao quando atinge o nó objetivo, no nosso caso, c119
 branchAndBound([[G,No|Caminho]|_],[G,Solucao]):-
     objetivo(No),
@@ -660,5 +653,7 @@ bfs([[NoAtual | CaminhoParcial] | OutrosCaminhos], Objetivo, Caminho, Visitados)
         ),
         NovosCaminhos
     ),
+    %junta caminhos que ainda estão na fila com os novos caminhos gerados
     append(OutrosCaminhos, NovosCaminhos, CaminhosAtualizados),
+    %busca continua com a fila de caminhos atualizada, incluindo o nó atual na lista de visitados p/ evitar loops
     bfs(CaminhosAtualizados, Objetivo, Caminho, [NoAtual | Visitados]).
