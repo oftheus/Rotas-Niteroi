@@ -573,6 +573,13 @@ conexaoGn(CA, CB, Rua, G):-
 conexaoHn(CA, CB, Rua, H):-
     conexaoGH(CA,CB,Rua,_,H).
 
+%Wrapper de busca pra o A*
+buscaAEstrela(Origem, Solucao):-
+    conexaoHn(_, Origem, _, HInicial),
+    GInicial is 0,
+    FInicial is GInicial+HInicial,
+    aEstrela([[GInicial, HInicial, FInicial, Origem]], Solucao).
+
 %BUSCA EM LARGURA
 % Predicado principal
 buscar(Inicio, Objetivo, Caminho, Arestas) :-
