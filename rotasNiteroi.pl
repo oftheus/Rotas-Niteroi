@@ -533,5 +533,7 @@ bfs([[NoAtual | CaminhoParcial] | OutrosCaminhos], Objetivo, Caminho, Visitados)
         ),
         NovosCaminhos
     ),
+    %junta caminhos que ainda estão na fila com os novos caminhos gerados
     append(OutrosCaminhos, NovosCaminhos, CaminhosAtualizados),
+    %busca continua com a fila de caminhos atualizada, incluindo o nó atual na lista de visitados p/ evitar loops
     bfs(CaminhosAtualizados, Objetivo, Caminho, [NoAtual | Visitados]).
