@@ -553,7 +553,7 @@ particionar(X,[Y|Cauda],Menor,[Y|Maior]):-
     particionar(X,Cauda,Menor,Maior).
 
 maior([_,_,F1|_],[_,_,F2|_]) :- F1 > F2.
-objetivo(c119).
+
 %Definicao de conexaoGH usando a funçao f(n)=g(n) + h(n)
 %CA= Cruzamento A, CB = Cruzamento B
 conexaoFn(CA, CB, Rua, G, H, F):-
@@ -573,13 +573,15 @@ conexaoGn(CA, CB, Rua, G):-
 conexaoHn(CA, CB, Rua, H):-
     conexaoGH(CA,CB,Rua,_,H).
 
-%Wrapper de busca pra o A*
-buscaAEstrela(Origem, Solucao):-
+%buscar(com A*). 
+buscar(Origem, Solucao):-
     conexaoHn(_, Origem, _, HInicial),
     GInicial is 0,
     FInicial is GInicial+HInicial,
     aEstrela([[GInicial, HInicial, FInicial, Origem]], Solucao).
 
+%Objetivo fixado, maior limitação do A*, não podemos facilmente mudar de objetivo, só a origem.
+objetivo(c119).
 %BUSCA EM LARGURA
 % Predicado principal
 buscar(Inicio, Objetivo, Caminho, Arestas) :-
