@@ -524,6 +524,14 @@ conexaoFn(CA, CB, Rua, G, H, F):-
 conexao(CA, CB, Rua):-
     conexaoGH(CA, CB, Rua, _, _).
 
+%Definicao usando custo g(n). Útil para uso do branch-and-bound(BFS + Gn).
+conexaoGn(CA, CB, Rua, G):-
+    conexaoGH(CA,CB, Rua, G, _).
+
+%Definicao usando heuristica H(n). Util para uso do best-first(bfs + Hn)
+conexaoHn(CA, CB, Rua, H):-
+    conexaoGH(CA,CB,Rua,_,H).
+
 %BUSCA EM LARGURA
 % Predicado principal
 buscar(Inicio, Objetivo, Caminho, Arestas) :-
