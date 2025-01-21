@@ -635,6 +635,13 @@ buscaBab(Origem, Solucao):-
     GInicial is 0,
     branchAndBound([[GInicial, Origem]], Solucao).
 %BUSCA EM LARGURA
+
+%Buscar sem arestas
+buscar(Inicio, Objetivo, Caminho) :-
+    bfs([[Inicio]], Objetivo, Caminho, []),
+    !.
+
+
 % Predicado principal
 buscar(Inicio, Objetivo, Caminho, Arestas) :-
     length(Caminho, NumVertices),
