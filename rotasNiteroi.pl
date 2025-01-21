@@ -631,6 +631,9 @@ particionarBab(X,[Y|Cauda],Menor,[Y|Maior]):-
 
 maiorBab([G1|_],[G2|_]) :- G1 > G2.
 
+buscaBab(Origem, Solucao):-
+    GInicial is 0,
+    branchAndBound([[GInicial, Origem]], Solucao).
 %BUSCA EM LARGURA
 % Predicado principal
 buscar(Inicio, Objetivo, Caminho, Arestas) :-
