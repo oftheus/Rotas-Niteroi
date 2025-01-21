@@ -513,6 +513,47 @@ conexaoGH(c89, c80, "R. Santa Rosa", 130, 1488).
 conexaoGH(c80, c74, "R. Santa Rosa", 210, 1364).
 
 
+%Implementação A-Estrela!
+
+%Retorna a solucao quando atinge o nó objetivo, no nosso caso, c119
+aEstrela([[G,H,F,No|Caminho]|_],[G,H,F,Solucao]):-
+    objetivo(No),
+    reverse([No|Caminho], Solucao).
+
+aEstrela([Caminho| Caminhos], Solucao):-
+    estendeAEstrela(Caminho, NovosCaminhos),
+    append(Caminhos, NovosCaminhos, Caminhos1),
+    ordenaAEstrela(Caminhos1, Caminhos2),
+    aEstrela(Caminhos2, Solucao).
+
+estendeAEstrela([GC, _, _, No|Caminho], NovosCaminhos):-
+	findall([GNovo, HNovo, FNovo, NovoNo, No|Caminho], 
+            (	conexaoFn(No, NovoNo, _, GN, HN, _),
+                not(member(NovoNo, [No|Caminho])),
+                GNovo is GC + GN,
+                HNovo is HN,
+                FNovo is GNovo + HNovo ), NovosCaminhos).
+
+ordenaAEstrela(Caminhos, CaminhosOrd):-
+    quicksort(Caminhos, CaminhosOrd).
+
+quicksort([],[]).
+quicksort([X|Cauda], ListaOrd):-
+    particionar(X,Cauda,Menor,Maior),
+    quicksort(Menor,MenorOrd),
+    quicksort(Maior,MaiorOrd),
+    append(MenorOrd, [X|MaiorOrd],ListaOrd).
+
+particionar(_, [], [], []).
+particionar(X, [Y|Cauda], [Y|Menor], Maior):-
+    maior(X,Y),!,
+    particionar(X,Cauda,Menor,Maior).
+
+particionar(X,[Y|Cauda],Menor,[Y|Maior]):-
+    particionar(X,Cauda,Menor,Maior).
+
+maior([_,_,F1|_],[_,_,F2|_]) :- F1 > F2.
+objetivo(c119).
 %Definicao de conexaoGH usando a funçao f(n)=g(n) + h(n)
 %CA= Cruzamento A, CB = Cruzamento B
 conexaoFn(CA, CB, Rua, G, H, F):-
