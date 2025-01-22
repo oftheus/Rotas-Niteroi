@@ -22,7 +22,19 @@ conexao(C18, C19, "R. Álvares de Azevedo", 150).
 
 <br>&nbsp;<br>
 
-### 2. Algoritmo de Busca
+### 2. Algoritmos de Buscas
+#### Buscas Cegas:
+
+Implementamos buscas cegas para validar o grafo e gerar uma visão inicial do funcionamento das rotas.
+
+Busca em Largura (BFS): Explora os cruzamentos camada por camada, garantindo a visita em ordem de menor profundidade.
+Busca em Profundidade (DFS): Explora os cruzamentos até alcançar o nó mais profundo antes de voltar e explorar outros caminhos.
+
+⚠️ Essas buscas não consideram os custos das arestas (distâncias), sendo aplicáveis apenas para analisar a conectividade entre cruzamentos.
+
+#### Buscas com Heurísticas:
+
+#### A*:
 O algoritmo utilizado para encontrar o caminho mais curto entre dois cruzamentos foi o **A***. Esse método combina o custo acumulado com uma estimativa heurística para priorizar os nós mais promissores a cada etapa.
 
 #### Componentes do A*:
@@ -55,6 +67,9 @@ A heurística baseada no número mínimo de arestas apresenta vantagens importan
 
 2. **Generalidade**:
    - Essa abordagem é aplicável independentemente da geografia específica da cidade, tornando-a uma solução mais genérica para o problema.
+  
+#### Branch and Bound:
+Adicionalmente, implementamos o algoritmo de Branch and Bound, que prioriza explorar os caminhos de menor custo acumulado até o momento, garantindo a solução ótima.
 
 #### Outra Abordagem Possível: Algoritmo com Atualização Dinâmica de Pesos
 
@@ -91,10 +106,10 @@ Uma alternativa para otimizar o sistema seria implementar um algoritmo com **atu
 1. Definir os cruzamentos (`C1`, `C2`, etc.) e as conexões entre eles.
 2. Representar as ruas/avenidas e suas distâncias em predicados `conexao/4`.
 
-#### Passo 2: Implementação do Algoritmo A*
-1. Implementar o cálculo do custo acumulado (`g(n)`).
-2. Implementar a função heurística baseada no número mínimo de arestas.
-3. Implementar o A* para calcular o caminho mais curto e o custo total.
+#### Passo 2: Implementação das Buscas
+1. Implementar Busca em Largura e Busca em Profundidade para explorar o grafo.
+2. Implementar A* com heurística baseada no número mínimo de arestas.
+3. Implementar Branch and Bound.
 
 #### Passo 3: Testes
 1. Criar cenários de teste para rotas curtas e longas dentro dos bairros de Icaraí e Santa Rosa.
@@ -107,12 +122,9 @@ Uma alternativa para otimizar o sistema seria implementar um algoritmo com **atu
 - **`conexao/4`**: Representa as conexões entre cruzamentos.
   - Exemplo: `conexao(C1, C2, "Rua das Flores", 100).`
 
-- **`rota_mais_curta/4`**: Calcula a rota mais curta entre dois cruzamentos usando o A*.
-  - Parâmetros:
-    1. Cruzamento inicial.
-    2. Cruzamento final.
-    3. Lista com os cruzamentos na rota.
-    4. Custo total da rota.
+- **`buscar/3`**: Realiza buscas cegas (DFS ou BFS) para verificar a conectividade entre dois cruzamentos.
+
+- **`buscaAEstrela/2`**: Calcula a rota mais curta entre dois cruzamentos usando o A*.
 
 #### Função Heurística:
 - Baseada no número mínimo de arestas multiplicado pelo custo médio das arestas.
@@ -124,12 +136,18 @@ Uma alternativa para otimizar o sistema seria implementar um algoritmo com **atu
 <br>&nbsp;<br>
 ### 5. Uso do Sistema
 
-#### Exemplo de Consulta:
-Para encontrar a rota mais curta entre `C1` e `C10`:
+#### Exemplo de Consultas:
+
+Para realizar uma busca em largura entre os cruzamentos `C2` e `C44`:
 ```prolog
-?- rota_mais_curta(C1, C10, Caminho, Custo).
-Caminho = [C1, C3, C7, C10]
-Custo = 450.
+?- buscar(c2, c44, Caminho).  
+Caminho = [c2, c3, c4, c5, c6, c42, c43, c44].  
+```
+
+Para encontrar a rota mais curta entre `c1` e `c119` com A*:
+```prolog
+?- buscaAEstrela(c1, S).
+S = [c1, c2, c3, c4, c5, c35, c36, c39, c44, c49, c52, c53, c54, c99, c100, c105, c106, c107, c112, c118, c119]]
 ```
 
 <br>&nbsp;<br>

@@ -513,8 +513,6 @@ conexaoGH(c89, c80, "R. Santa Rosa", 130, 1488).
 conexaoGH(c80, c74, "R. Santa Rosa", 210, 1364).
 
 
-
-
 %Implementação A-Estrela!
 
 %Retorna a solucao quando atinge o nó objetivo, no nosso caso, c119
@@ -659,6 +657,7 @@ bfs([[NoAtual | CaminhoParcial] | OutrosCaminhos], Objetivo, Caminho, Visitados)
         [ProximoNo, NoAtual | CaminhoParcial],
         (
             conexao(NoAtual, ProximoNo, _), 
+
             \+ member(ProximoNo, [NoAtual | Visitados])
         ),
         NovosCaminhos
@@ -667,3 +666,4 @@ bfs([[NoAtual | CaminhoParcial] | OutrosCaminhos], Objetivo, Caminho, Visitados)
     append(OutrosCaminhos, NovosCaminhos, CaminhosAtualizados),
     %busca continua com a fila de caminhos atualizada, incluindo o nó atual na lista de visitados p/ evitar loops
     bfs(CaminhosAtualizados, Objetivo, Caminho, [NoAtual | Visitados]).
+
