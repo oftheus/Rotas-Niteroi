@@ -1,0 +1,31 @@
+Beleza, Matheus 👍
+O que você tem já está muito rico em detalhes, mas para uma reunião de status é bom organizar de forma clara, com começo, meio e fim — tipo um storytelling curto: o que já foi entregue, o que está sendo feito agora, o que vem a seguir.
+
+Aqui está uma versão mais fluida e coerente do seu roteiro de fala:
+
+⸻
+
+🔹 O que já foi feito
+Até o momento, concluí as validações das seções de dados pessoais e informações da portabilidade na tela de resumo.
+Nesse processo, precisei realizar interceptações de APIs para garantir que os dados escolhidos nas telas anteriores — como contratação de fundo e plano de origem — fossem corretamente refletidos na tela de resumo. Essa mesma lógica foi validada também para os dados pessoais.
+
+Durante os testes, identifiquei alguns pontos relevantes:
+	•	Seção do corretor: embora a API esteja retornando os dados corretamente, eles não estão sendo exibidos na tela. Isso já foi reportado e o time de desenvolvimento está cuidando.
+	•	Tipo de certificado: em alguns casos, a tela exibia “retrátil” mesmo quando havia sido escolhido “irretratável”. Também já reportado e em tratamento pelo time.
+	•	Bug visual de acentuação em uma das modais do filtro de fundos: já havia sido identificado anteriormente, não tem grande impacto funcional, mas ainda está pendente de correção.
+
+🔹 O que estou fazendo agora
+Atualmente, estou finalizando as validações da tela de resumo. Restam apenas três cenários, todos relacionados às modais que podem surgir após a aceitação do termo de compromisso.
+
+🔹 Próximos passos
+Concluindo essa etapa, restarão apenas as duas últimas telas:
+	•	a de informar o código
+	•	e a de sucesso
+
+No total, serão mais 6 ou 7 cenários para finalizar o ciclo de validações.
+
+⸻
+
+👉 Essa estrutura mostra progresso, dá visibilidade dos problemas encontrados e fecha com um plano de ação claro.
+
+Quer que eu monte também uma versão bem enxuta (tipo “pitch de 1 minuto”), caso a reunião seja rápida?
